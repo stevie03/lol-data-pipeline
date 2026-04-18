@@ -49,7 +49,7 @@ jobs:
         GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       run: |
         cd lol_models
-        dbt run --profiles-dir
+        dbt run --profiles-dir .
 
     
 
