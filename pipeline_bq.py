@@ -89,7 +89,9 @@ for match_id in match_ids:
 
 
 if all_rows_to_insert:
-    job_config = bigquery.LoadJobConfig(schema=schema)
+    job_config = bigquery.LoadJobConfig(schema=schema,
+                                        schema_update_options=[bigquery.SchemaUpdateOption.ALLOW_FIELD_ADDITION],
+                                         write_disposition=bigquery.WriteDisposition.WRITE_APPEND)
     job = client.load_table_from_json(all_rows_to_insert, table_id, job_config=job_config)
     job.result()  
     print(f"{len(all_rows_to_insert)} rows successfully uploaded to BigQuery.")
