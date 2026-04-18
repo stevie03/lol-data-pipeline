@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-Data_Warehouse-4285F4?logo=google-cloud&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Automation-2088FF?logo=github-actions&logoColor=white)
-![Looker Studio](https://img.shields.io/badge/Looker_Studio-Data_Viz-F4B400?logo=looker&logoColor=white)
 
 ## Project Overview
 This is an end-to-end Data Engineering project designed to automatically extract, transform, and load (ETL) my personal League of Legends match history into a cloud data warehouse for visualization. 
@@ -16,7 +15,6 @@ The pipeline runs completely hands-free on a daily schedule, ensuring that my Lo
 2. **Transform:** Flattening complex JSON responses and filtering specific participant data (KDA, Champion played, Win/Loss, etc.) using **Python**.
 3. **Load:** Writing the cleaned data into **Google Cloud BigQuery**. The script implements a "Smart Load" (Idempotent) logic: it checks existing `match_id`s in the warehouse to prevent duplicate row insertions.
 4. **Automate:** A **GitHub Actions** CI/CD workflow runs the Python script automatically every night at 03:00 UTC.
-5. **Visualize:** **Looker Studio** connects directly to the BigQuery dataset to display real-time win rates, KDA progression, and most played champions.
 
 ## Features
 * **Idempotent Data Ingestion:** Safely re-runnable script that only inserts *new* matches.
