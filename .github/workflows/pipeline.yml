@@ -23,7 +23,12 @@ jobs:
         pip install -r requirements.txt
     
     - name: Google Cloud Authentication
-      run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > google-key.json
+      env:
+        GCP_KEY: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      run: |
+        cat << EOF > google-key.json
+        $GCP_KEY
+        EOF
     
     - name: Run the pipeline
       env:
@@ -32,7 +37,7 @@ jobs:
         PLAYER_NAME: ${{ secrets.PLAYER_NAME }}
         GOOGLE_APPLICATION_CREDENTIALS: "google-key.json"
       run: |
-        python pipeline.bq.py
+        python pipeline_bq.py
     
 
     
