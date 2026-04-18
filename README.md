@@ -7,7 +7,7 @@
 ![Looker Studio](https://img.shields.io/badge/Looker_Studio-Visualization-4285F4?logo=looker&logoColor=white)
 
 ## Project Overview
-This is an end-to-end Data Engineering project designed to automatically extract, load, and transform (ELT) my personal League of Legends match history into a cloud data warehouse for visualization. 
+This is an end-to-end Data Engineering project designed to automatically extract, load, and transform my personal League of Legends match history into a cloud data warehouse for visualization. 
 
 Moving beyond standard ETL, this project utilizes a **Modern Data Stack** architecture. It separates raw data ingestion (Python) from business logic and metric calculation (**dbt**), ensuring that my Looker Studio dashboard is always up-to-date with accurate, analytics-ready gaming stats.
 
