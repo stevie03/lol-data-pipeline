@@ -57,7 +57,7 @@ try:
     existing_match_ids = {row.match_id for row in query_job}
     print(f"{len(existing_match_ids)} number of matches in the table.")
 except Exception as e:
-    print(f"⚠️ The table is empty or an error occurred. Error: {e}")
+    print(f"The table is empty or an error occurred. Error: {e}")
 all_rows_to_insert = []
 url = f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/{PUUID}/ids?start=0&count=20&api_key={API_KEY}"
 match_ids = requests.get(url, headers={"X-Riot-Token": API_KEY}).json()
