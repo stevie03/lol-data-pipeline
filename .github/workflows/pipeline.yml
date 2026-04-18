@@ -32,7 +32,7 @@ jobs:
         PLAYER_NAME: ${{ secrets.PLAYER_NAME }}
         GOOGLE_APPLICATION_CREDENTIALS: "google-key.json"
       run: |
-        python pipeline.bq.py
+        python pipeline_bq.py
     
 
     
