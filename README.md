@@ -1,4 +1,4 @@
-# League of Legends Automated Data Pipeline (ELT)
+# League of Legends Automated Data Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-Data_Warehouse-4285F4?logo=google-cloud&logoColor=white)
