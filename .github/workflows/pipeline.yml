@@ -34,13 +34,6 @@ jobs:
       run: |
         pip install dbt-bigquery mashumaro>=3.17
 
-    - name: Run dbt 
-      env:
-        GCP_PROJECT_ID: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-      run: |
-        cd lol_models
-        dbt run --profiles-dir . 
-
     
     - name: Run the pipeline
       env:
@@ -50,6 +43,14 @@ jobs:
         GOOGLE_APPLICATION_CREDENTIALS: "google-key.json"
       run: |
         python pipeline_bq.py
+        
+    - name: Run dbt
+      env:
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      run: |
+        cd lol_models
+        dbt run --profiles-dir
+
     
 
     
