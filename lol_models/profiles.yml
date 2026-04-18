@@ -3,10 +3,21 @@ lol_models:
     dev:
       type: bigquery
       method: service-account
-      project: "{{ env_var('GCP_PROJECT_ID') }}"
-      dataset: dbt_lol
+      project: lol-data-pipeline-493614
+      dataset: dbt_lol_dev
       threads: 1
-      keyfile: ../google-key.json # 
+      keyfile: ../google-key.json 
       location: EU 
       priority: interactive
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: lol-data-pipeline-493614
+      dataset: dbt_lol_prod
+      threads: 1
+      keyfile: ../google-key.json 
+      location: EU 
+      priority: interactive
+
   target: dev
