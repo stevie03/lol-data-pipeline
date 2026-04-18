@@ -21,7 +21,6 @@ This pipeline implements a two-tier transformation process (Silver to Gold layer
    * Loads the structured data into a **Google Cloud BigQuery** `matches` table. Implements idempotent "Smart Load" logic to prevent duplicate row insertions.
 2. **Transform (dbt) - *The Gold Layer*:**
    * Utilizes **dbt (Data Build Tool)** to apply business logic directly within the data warehouse.
-   * Transforms raw match data into an analytics-ready fact table (`fct_matches`).
    * Handles complex SQL calculations, such as computing KDA ratios (securely handling division by zero for "perfect games" using `GREATEST` functions).
 3. **Visualize (Looker Studio):**
    * Connects directly to the dbt-generated models to visualize time-series performance, daily average KDAs, and overall trends.
