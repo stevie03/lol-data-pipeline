@@ -1,0 +1,15 @@
+.env
+google-key.json
+
+.venv/
+__pycache__/
+
+lol_database.db
+raw_match.json
+
+get_puuid.py
+get_matches.py
+get_match_detail.py
+transform.py
+pipeline.py
+teszt_env.py
