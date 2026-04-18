@@ -1,0 +1,30 @@
+[0m13:03:19.940679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173133A8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017310BA87D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173155FB9D0>]}
+
+
+============================== 13:03:19.943968 | 0b66ee47-caf6-4089-97fe-72435d9dac7e ==============================
+[0m13:03:19.943968 [info ] [MainThread]: Running with dbt=1.11.8
+[0m13:03:19.944770 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\steve\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init lol_models', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:03:19.958612 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\steve\.dbt
+[0m13:03:19.960372 [debug] [MainThread]: Starter project path: c:\Users\steve\Desktop\Python Projektek\Lol_Data_Project\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:03:19.978717 [info ] [MainThread]: 
+Your new dbt project "lol_models" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:03:19.979205 [info ] [MainThread]: Setting up your profile.
+[0m13:07:50.851829 [info ] [MainThread]: Profile lol_models written to C:\Users\steve\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:07:50.853012 [debug] [MainThread]: Command `dbt init` succeeded at 13:07:50.852916 after 270.99 seconds
+[0m13:07:50.853258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001732F3DCFC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001732F327530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001732F3787C0>]}
+[0m13:07:50.853552 [debug] [MainThread]: Flushing usage events
+[0m13:07:51.639704 [debug] [MainThread]: An error was encountered while trying to flush usage events

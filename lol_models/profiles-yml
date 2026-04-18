@@ -1,0 +1,12 @@
+lol_models:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: dbt_lol
+      threads: 1
+      keyfile: ../google-key.json # 
+      location: EU 
+      priority: interactive
+  target: dev
