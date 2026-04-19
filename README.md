@@ -28,7 +28,7 @@ This pipeline implements a two-tier transformation process (Silver to Gold layer
    * A completely hands-free CI/CD workflow runs every night at 03:00 UTC. It sequentially executes the Python extraction script followed by `dbt run` to refresh the final models.
 
 ## Features
-* **Modern ELT Architecture:** Clear separation of concerns between data extraction and business logic.
+* **Hybrid ETL/ELT Architecture: Python handles the Extract and initial Transform tasks (flattening JSON, applying basic 'Remake' logic) acting as the Silver layer, while dbt takes over for the heavy analytical ELT transformations (Window Functions, rolling averages) to build the Gold reporting layer.
 * **Idempotent Data Ingestion:** Safely re-runnable Python script that only inserts *new* matches.
 * **Declarative Data Modeling:** SQL-based transformations built with dbt, ensuring data quality and version control for analytics.
 * **Serverless Execution:** Powered entirely by GitHub Actions runners.
