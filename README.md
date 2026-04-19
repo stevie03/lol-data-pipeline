@@ -6,7 +6,7 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Automation-2088FF?logo=github-actions&logoColor=white)
 ![Looker Studio](https://img.shields.io/badge/Looker_Studio-Visualization-4285F4?logo=looker&logoColor=white)
 
-![Data Pipeline Architecture](images/architecture.png)
+![Data Pipeline Architecture](assets/architecture.png)
 
 ## Project Overview
 This is an end-to-end Data Engineering project designed to automatically extract, load, and transform my personal League of Legends match history into a cloud data warehouse for visualization. 
