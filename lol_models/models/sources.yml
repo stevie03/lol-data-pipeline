@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: match_history         
+    database: lol-data-pipeline-493614
+    schema: match_history      
+    tables:
+      - name: matches          
