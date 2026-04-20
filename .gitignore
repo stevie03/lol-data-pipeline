@@ -1,6 +1,8 @@
 .env
 google-key.json
-
+logs/
+plugins/
+config/
 .venv/
 __pycache__/
 
@@ -13,3 +15,4 @@ get_match_detail.py
 transform.py
 pipeline.py
 teszt_env.py
+test_dag.py
