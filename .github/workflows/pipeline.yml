@@ -45,7 +45,6 @@ jobs:
     - name: Run dbt
       env:
         GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-        # Ha a dbt profiles.yml is kéri a kulcsot, innen egy mappával feljebb találja:
         GOOGLE_APPLICATION_CREDENTIALS: "../google-key.json" 
       run: |
         cd dags/lol_project/lol_models
