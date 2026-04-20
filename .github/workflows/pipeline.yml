@@ -42,6 +42,7 @@ jobs:
         PLAYER_NAME: ${{ secrets.PLAYER_NAME }}
         GOOGLE_APPLICATION_CREDENTIALS: "google-key.json"
       run: |
+        cd dags/lol_project
         python pipeline_bq.py
         
     - name: Run dbt
