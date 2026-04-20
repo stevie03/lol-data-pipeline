@@ -26,9 +26,7 @@ jobs:
       env:
         GCP_KEY: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       run: |
-        cat << EOF > google-key.json
-        $GCP_KEY
-        EOF
+        echo '${{ secrets.GCP_CREDENTIALS }}' > dags/lol_project/google-key.json
 
     - name: Install dbt
       run: |
