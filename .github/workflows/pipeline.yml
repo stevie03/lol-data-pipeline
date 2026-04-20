@@ -1,8 +1,8 @@
 name: Lol-data-project-pipeline
 on:
   # schedule:
-  #   - cron: '0 3 * * *' # Kikommentelve! Így nem fut le magától minden éjjel.
-  workflow_dispatch: # Ezzel a sorral viszont továbbra is elindíthatod manuálisan gombnyomásra.
+  #   - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
