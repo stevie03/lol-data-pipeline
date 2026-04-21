@@ -16,3 +16,4 @@ transform.py
 pipeline.py
 teszt_env.py
 test_dag.py
+terraform/.terraform/
