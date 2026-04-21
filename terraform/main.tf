@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_bigquery_dataset" "match_history" {
-  dataset_id  = "match_history" # Itt a lényeg!
+  dataset_id  = "match_history" 
   location    = "EU"
   description = "Raw data from Riot API"
 }
