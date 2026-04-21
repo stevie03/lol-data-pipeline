@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_matches
+    description: "Daily aggregated match statistics and 7-day KDA rolling average."
+    columns:
+      - name: match_date
+        description: "The date of the matches played."
+        tests:
+          - unique    
+          - not_null  
+
+      - name: matches_played
+        description: "Total number of matches played on that specific day."
+        tests:
+          - not_null
+
+      - name: kda_ratio
+        description: "The daily aggregated KDA ratio."
+        tests:
+          - not_null
