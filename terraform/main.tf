@@ -19,3 +19,9 @@ resource "google_project_iam_member" "bq_editor" {
   role    = "roles/bigquery.dataEditor"
   member  = "serviceAccount:${google_service_account.airflow_runner.email}"
 }
+
+resource "google_project_iam_member" "bq_job_user" {
+  project = "lol-data-pipeline-493614"
+  role    = "roles/bigquery.jobUser"
+  member  = "serviceAccount:${google_service_account.airflow_runner.email}"
+}
